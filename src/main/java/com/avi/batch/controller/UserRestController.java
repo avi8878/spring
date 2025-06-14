@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collections;
@@ -52,7 +51,7 @@ public class UserRestController {
      * @return The created User.
      */
     @PostMapping
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
         User createdUser = new User(1,"avi");
         return new ResponseEntity(createdUser, HttpStatus.CREATED);
     }
@@ -65,7 +64,7 @@ public class UserRestController {
      * @return ResponseEntity with updated User if found, 404 otherwise.
      */
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @Valid @RequestBody User userDetails) {
+    public ResponseEntity<User> updateUser(@PathVariable Long id,@RequestBody User userDetails) {
         User updatedUser = new User(1,"avi");
         if (updatedUser != null) {
             return ResponseEntity.ok(updatedUser);

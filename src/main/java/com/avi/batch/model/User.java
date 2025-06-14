@@ -1,13 +1,10 @@
 package com.avi.batch.model;
 
 
-import javax.validation.constraints.Size;
-
 public class User {
 
     private Integer id;
 
-    @Size(max = 6, min =1, message = "size is less")
     private String name;
 
     public User() {
