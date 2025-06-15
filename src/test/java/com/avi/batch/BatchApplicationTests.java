@@ -1,14 +1,14 @@
 package com.avi.batch;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
-@Slf4j
 class BatchApplicationTests {
-
+	private static final Logger log = LoggerFactory.getLogger(BatchApplicationTests.class);
 	@Test
 	void testSayHello() {
       String result = "Avinash";
