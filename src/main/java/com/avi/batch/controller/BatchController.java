@@ -25,14 +25,14 @@ public class BatchController {
     public String entity(){
 
        // departmentService.updateDepartment();
-        return "success";
+        return "Hello  Batch Entity";
     }
 
 
     @GetMapping("/load")
     public String load(){
 
-        return "success";
+        return "Hello  Batch Load";
     }
 
     @GetMapping("/test")
